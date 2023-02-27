@@ -1267,6 +1267,15 @@
       }, 1 );
    } );
 
+   Api.registerPlural( 'columns().checkboxes.selectedData()', 'column().checkboxes.selectedData()', function () {
+      var rows_selected = [];
+      var selectedRowDataArray = this.checkboxes.selected();
+      $.each(selectedRowDataArray, function (index, rowId) {
+          rows_selected.push(rowId);
+      });
+      return rows_selected;
+   } );
+
 
    /**
     * Version information
